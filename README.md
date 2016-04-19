@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, XHSegmentType)
 {
     XHSegmentTypeFilled = 0,    //  充满屏幕高度
     XHSegmentTypeFit,           //  适应文字大小
-    XHSegmentTypeCircle         //  循环
+    XHSegmentTypeCircle         //  循环（待做）
 };
 
 @protocol XHSegmentControlDelegate <NSObject>
