@@ -17,6 +17,7 @@
 `XHSegmentControl`是一个UIView类型的控件，可以设置控件背景色，添加底部高亮线，并设置标题字体和颜色等<br>
 有两种模式可通过`segmentType`属性来设置<br>
 分别是:<br>
+｀
 typedef NS_ENUM(NSInteger, XHSegmentType)
 {
     XHSegmentTypeFilled = 0,    //  充满屏幕高度
@@ -25,8 +26,7 @@ typedef NS_ENUM(NSInteger, XHSegmentType)
 };
 
 @protocol XHSegmentControlDelegate <NSObject>
-
 - (void)xhSegmentSelectAtIndex:(NSInteger)index animation:(BOOL)animation;
-
 @end
+｀
 `XHSegmentControlDelegate`是`segmentControl`的代理，包含方法可用来接受segment选择事件
