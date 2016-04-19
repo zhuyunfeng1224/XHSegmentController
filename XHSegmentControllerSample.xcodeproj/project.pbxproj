@@ -15,6 +15,10 @@
 		08AF40161CC6465400D70CFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08AF40141CC6465400D70CFE /* LaunchScreen.storyboard */; };
 		08AF40211CC6465400D70CFE /* XHSegmentControllerSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08AF40201CC6465400D70CFE /* XHSegmentControllerSampleTests.m */; };
 		08AF402C1CC6465400D70CFE /* XHSegmentControllerSampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08AF402B1CC6465400D70CFE /* XHSegmentControllerSampleUITests.m */; };
+		08AF40401CC6467200D70CFE /* XHSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 08AF403B1CC6467200D70CFE /* XHSegmentControl.m */; };
+		08AF40411CC6467200D70CFE /* XHSegmentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 08AF403D1CC6467200D70CFE /* XHSegmentItem.m */; };
+		08AF40421CC6467200D70CFE /* XHSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08AF403F1CC6467200D70CFE /* XHSegmentViewController.m */; };
+		08AF40451CC6483900D70CFE /* SegmentSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08AF40441CC6483900D70CFE /* SegmentSampleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		08AF40271CC6465400D70CFE /* XHSegmentControllerSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XHSegmentControllerSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08AF402B1CC6465400D70CFE /* XHSegmentControllerSampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XHSegmentControllerSampleUITests.m; sourceTree = "<group>"; };
 		08AF402D1CC6465500D70CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08AF403A1CC6467200D70CFE /* XHSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHSegmentControl.h; sourceTree = "<group>"; };
+		08AF403B1CC6467200D70CFE /* XHSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHSegmentControl.m; sourceTree = "<group>"; };
+		08AF403C1CC6467200D70CFE /* XHSegmentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHSegmentItem.h; sourceTree = "<group>"; };
+		08AF403D1CC6467200D70CFE /* XHSegmentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHSegmentItem.m; sourceTree = "<group>"; };
+		08AF403E1CC6467200D70CFE /* XHSegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHSegmentViewController.h; sourceTree = "<group>"; };
+		08AF403F1CC6467200D70CFE /* XHSegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHSegmentViewController.m; sourceTree = "<group>"; };
+		08AF40431CC6483900D70CFE /* SegmentSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentSampleViewController.h; sourceTree = "<group>"; };
+		08AF40441CC6483900D70CFE /* SegmentSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentSampleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,7 @@
 		08AF3FFA1CC6465400D70CFE = {
 			isa = PBXGroup;
 			children = (
+				08AF40391CC6467200D70CFE /* XHSegmentController */,
 				08AF40051CC6465400D70CFE /* XHSegmentControllerSample */,
 				08AF401F1CC6465400D70CFE /* XHSegmentControllerSampleTests */,
 				08AF402A1CC6465400D70CFE /* XHSegmentControllerSampleUITests */,
@@ -105,6 +118,8 @@
 				08AF400A1CC6465400D70CFE /* AppDelegate.m */,
 				08AF400C1CC6465400D70CFE /* ViewController.h */,
 				08AF400D1CC6465400D70CFE /* ViewController.m */,
+				08AF40431CC6483900D70CFE /* SegmentSampleViewController.h */,
+				08AF40441CC6483900D70CFE /* SegmentSampleViewController.m */,
 				08AF400F1CC6465400D70CFE /* Main.storyboard */,
 				08AF40121CC6465400D70CFE /* Assets.xcassets */,
 				08AF40141CC6465400D70CFE /* LaunchScreen.storyboard */,
@@ -138,6 +153,19 @@
 				08AF402D1CC6465500D70CFE /* Info.plist */,
 			);
 			path = XHSegmentControllerSampleUITests;
+			sourceTree = "<group>";
+		};
+		08AF40391CC6467200D70CFE /* XHSegmentController */ = {
+			isa = PBXGroup;
+			children = (
+				08AF403A1CC6467200D70CFE /* XHSegmentControl.h */,
+				08AF403B1CC6467200D70CFE /* XHSegmentControl.m */,
+				08AF403C1CC6467200D70CFE /* XHSegmentItem.h */,
+				08AF403D1CC6467200D70CFE /* XHSegmentItem.m */,
+				08AF403E1CC6467200D70CFE /* XHSegmentViewController.h */,
+				08AF403F1CC6467200D70CFE /* XHSegmentViewController.m */,
+			);
+			path = XHSegmentController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,8 +298,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08AF40421CC6467200D70CFE /* XHSegmentViewController.m in Sources */,
 				08AF400E1CC6465400D70CFE /* ViewController.m in Sources */,
+				08AF40451CC6483900D70CFE /* SegmentSampleViewController.m in Sources */,
+				08AF40401CC6467200D70CFE /* XHSegmentControl.m in Sources */,
 				08AF400B1CC6465400D70CFE /* AppDelegate.m in Sources */,
+				08AF40411CC6467200D70CFE /* XHSegmentItem.m in Sources */,
 				08AF40081CC6465400D70CFE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
