@@ -5,7 +5,7 @@
 ##XHSegmentViewController
 `XHSegmentViewController`使用如下，自定义ViewController并继承`XHSegmentViewController`，设置viewControllers属性<br>
 要点：要设置子ViewController的`title`，否则字体显示不出<br>
-```Objective-C
+```
      ViewController *vc1 = [[ViewController alloc] init];
      vc1.title = @"男装";
      ViewController *vc2 = [[ViewController alloc] init];
