@@ -12,15 +12,21 @@ XHSegmentViewController使用如下，自定义ViewController并继承XHSegmentV
      vc2.title = @"女装";
      ViewController *vc3 = [[ViewController alloc] init];
      vc3.title = @"童装";
-    
-    self.viewControllers = @[vc1, vc2, vc3];
+     self.viewControllers = @[vc1, vc2, vc3];
 ##XHSegmentControl
 XHSegmentControl是一个UIView类型的控件，可以设置控件背景色，添加底部高亮线，并设置标题字体和颜色等<br>
 有两种模式可通过segmentType属性来设置<br>
-分别是
+分别是:<br>
+typedef NS_ENUM(NSInteger, XHSegmentType)
+{
     XHSegmentTypeFilled = 0,    //  充满屏幕高度
     XHSegmentTypeFit,           //  适应文字大小
-    XHSegmentTypeCircle         //  循环  (待做)
-XHSegmentControlDelegate是segmentControl代理，包含方法
+    XHSegmentTypeCircle         //  循环
+};
+
+@protocol XHSegmentControlDelegate <NSObject>
+
 - (void)xhSegmentSelectAtIndex:(NSInteger)index animation:(BOOL)animation;
-可用来接受segment选择事件
+
+@end
+XHSegmentControlDelegate是segmentControl代理，包含方法可用来接受segment选择事件
