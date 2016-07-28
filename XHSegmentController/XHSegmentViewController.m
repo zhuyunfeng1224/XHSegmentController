@@ -32,29 +32,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
     
-    //  segmentControl
-    CGFloat y = [UINavigationBar appearance].translucent?0:64;
-    
-    self.segmentControl = [[XHSegmentControl alloc] initWithFrame:CGRectMake(0, y, [UIScreen mainScreen].bounds.size.width, DefaultSegmentHeight)];
-    self.segmentControl.delegate = self;
     [self.view addSubview:self.segmentControl];
-    
-    //  scrollView
-    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.segmentControl.frame), [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - CGRectGetMaxY(self.segmentControl.frame))];
-    self.scrollView.showsHorizontalScrollIndicator = NO;
-    self.scrollView.pagingEnabled = YES;
-    self.scrollView.decelerationRate = 0.5;
-    self.scrollView.delegate = self;
-    self.scrollView.alwaysBounceVertical = NO;
-    self.scrollView.scrollsToTop = NO;
-    self.scrollView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.scrollView];
     //  监听contentScrollView
     [self.scrollView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
-    [self.view addSubview:self.scrollView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -82,6 +66,35 @@
         
         self.segmentControl.selectIndex = self.segmentControl.selectIndex - 1;
     }
+}
+
+#pragma mark - lazy initializer
+- (XHSegmentControl *)segmentControl
+{
+    if (!_segmentControl)
+    {
+        CGFloat y = !self.navigationController?20:64;
+        _segmentControl = [[XHSegmentControl alloc] initWithFrame:CGRectMake(0, y, [UIScreen mainScreen].bounds.size.width, DefaultSegmentHeight)];
+        _segmentControl.delegate = self;
+    }
+    return _segmentControl;
+}
+
+- (UIScrollView *)scrollView
+{
+    //  scrollView
+    if (!_scrollView)
+    {
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_segmentControl.frame), [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - CGRectGetMaxY(_segmentControl.frame))];
+        _scrollView.showsHorizontalScrollIndicator = NO;
+        _scrollView.pagingEnabled = YES;
+        _scrollView.decelerationRate = 0.5;
+        _scrollView.delegate = self;
+        _scrollView.alwaysBounceVertical = NO;
+        _scrollView.scrollsToTop = NO;
+        _scrollView.backgroundColor = [UIColor whiteColor];
+    }
+    return _scrollView;
 }
 
 #pragma mark - Setters
@@ -170,6 +183,7 @@
     
     //  add controller
     UIViewController *controller = self.viewControllers[index];
+    
     //  add view
     UIView *view = controller.view;
     [view removeFromSuperview];

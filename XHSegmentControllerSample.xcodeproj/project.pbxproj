@@ -235,6 +235,7 @@
 				TargetAttributes = {
 					08AF40021CC6465400D70CFE = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = Z74CTWW5PK;
 					};
 					08AF401B1CC6465400D70CFE = {
 						CreatedOnToolsVersion = 7.3;
@@ -447,7 +448,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: ////////////////// zhu (7N7QS5PMNU)";
 				INFOPLIST_FILE = XHSegmentControllerSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xihe.XHSegmentControllerSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -458,7 +461,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: ////////////////// zhu (7N7QS5PMNU)";
 				INFOPLIST_FILE = XHSegmentControllerSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xihe.XHSegmentControllerSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -530,6 +535,7 @@
 				08AF40321CC6465500D70CFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		08AF40331CC6465500D70CFE /* Build configuration list for PBXNativeTarget "XHSegmentControllerSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +544,7 @@
 				08AF40351CC6465500D70CFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		08AF40361CC6465500D70CFE /* Build configuration list for PBXNativeTarget "XHSegmentControllerSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +553,7 @@
 				08AF40381CC6465500D70CFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
