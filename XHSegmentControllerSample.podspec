@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = "XHSegmentController"
-s.version          = "1.0.0"
+s.version          = "0.0.1"
 s.summary          = "A segment controller used on iOS."
 s.description      = <<-DESC
 It is a segment controller, which implement by Objective-C.
