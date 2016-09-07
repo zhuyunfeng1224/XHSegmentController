@@ -1,4 +1,5 @@
 # XHSegmentController
+![image](https://github.com/zhuyunfeng1224/XHImageStore/blob/master/XHSegmentController/XHSegmentController_screenshot.gif)
 这是一款分段选择控制器，分`XHSegmentViewController`和`XHSegmentControl`两部分<br>
 `XHSegmentViewController`通过添加子Controller实现，可以通过左右滑动页面来滑动选择器，适合用自定义segment来管理不同的页面<br>
 当然为了做到控件尽量轻量级，你也可以作为一个控件，单独使用`XHSegmentControl`
