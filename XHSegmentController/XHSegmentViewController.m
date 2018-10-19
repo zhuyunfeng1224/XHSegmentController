@@ -82,7 +82,7 @@
             y = 20;
         }
         
-        if (self.navigationController.navigationBarHidden == false) {
+        if (self.navigationController != nil && self.navigationController.navigationBarHidden == false) {
             y += 44;
         }
         
