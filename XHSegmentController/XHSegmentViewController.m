@@ -73,7 +73,19 @@
 {
     if (!_segmentControl)
     {
-        CGFloat y = !self.navigationController?20:64;
+        CGFloat y = 0;
+        
+        if (@available(iOS 11.0, *)) {
+             y = [[[UIApplication sharedApplication] delegate] window].safeAreaInsets.top;
+           
+        } else {
+            y = 20;
+        }
+        
+        if (self.navigationController.navigationBarHidden == false) {
+            y += 44;
+        }
+        
         _segmentControl = [[XHSegmentControl alloc] initWithFrame:CGRectMake(0, y, [UIScreen mainScreen].bounds.size.width, DefaultSegmentHeight)];
         _segmentControl.delegate = self;
     }
