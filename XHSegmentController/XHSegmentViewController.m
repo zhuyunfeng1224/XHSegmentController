@@ -76,7 +76,7 @@
         CGFloat y = 0;
         
         if (@available(iOS 11.0, *)) {
-             y = [[[UIApplication sharedApplication] delegate] window].safeAreaInsets.top;
+             y = fmax([[[UIApplication sharedApplication] delegate] window].safeAreaInsets.top, 16.0f);
            
         } else {
             y = 20;
