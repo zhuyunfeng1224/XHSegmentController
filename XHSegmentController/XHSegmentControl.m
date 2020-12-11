@@ -68,6 +68,9 @@
     self.titleColor = Default_Color;
     self.titleFont = Default_Title_font;
     self.lineWidth = Default_Line_Width;
+    self.cornerEnabled = Default_corner_enabled;
+    self.inset = Default_inset;
+    
     self.backgroundColor = [UIColor whiteColor];
     
     self.items = [[NSMutableArray alloc] init];
@@ -148,7 +151,7 @@
     
     //  load 高亮线
     self.lineLayer.backgroundColor = self.highlightColor.CGColor;
-     self.lineLayer.frame = CGRectMake(CGRectGetMinX(self.lineLayer.frame), CGRectGetHeight(self.frame) - self.lineWidth, CGRectGetWidth(self.lineLayer.frame), self.lineWidth);
+     self.lineLayer.frame = CGRectMake(CGRectGetMinX(self.lineLayer.frame) + self.inset, CGRectGetHeight(self.frame) - self.lineWidth, CGRectGetWidth(self.lineLayer.frame) - 2*self.inset, self.lineWidth);
     
     // 初始化scrollview
     if (self.backgroundImage) {
@@ -162,6 +165,7 @@
     
     //  根据type初始化items
     self.selectIndex = 0;
+    self.lineLayer.cornerRadius = self.cornerEnabled == true ? self.lineWidth/2.0f : 0.0f;
     [self layoutSubviews];
 }
 
@@ -255,7 +259,7 @@
         XHSegmentItem *item = self.items[selectIndex];
         [self segmentItemSelected:item];
         
-        self.lineLayer.frame = CGRectMake(CGRectGetMinX(item.frame), CGRectGetHeight(item.frame) - self.lineWidth, CGRectGetWidth(item.frame), self.lineWidth);
+        self.lineLayer.frame = CGRectMake(CGRectGetMinX(item.frame) + 12, CGRectGetHeight(item.frame) - self.lineWidth, CGRectGetWidth(item.frame) - 24, self.lineWidth);
         self.lastSelectRect = self.lineLayer.frame;
         
         [self.scrollView scrollRectToVisible:item.frame animated:YES];

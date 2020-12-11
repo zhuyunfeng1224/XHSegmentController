@@ -13,6 +13,9 @@
 #define Default_Color           [UIColor grayColor]
 #define Default_Highlight_Color [UIColor redColor]
 #define Default_Title_font      [UIFont systemFontOfSize:15]
+#define Default_corner_enabled    FALSE
+#define Default_inset           0
+
 
 #define Key_Title           @"title"
 #define Key_Title_Detail    @"titleDetail"
@@ -49,6 +52,8 @@ typedef NS_ENUM(NSInteger, XHSegmentType)
 @property(nonatomic)            CGFloat         borderWidth;
 @property(nonatomic, strong)    UIColor         *titleColor;
 @property(nonatomic, strong)    UIFont          *titleFont;
+@property(nonatomic, assign)    BOOL            cornerEnabled;
+@property(nonatomic, assign)    CGFloat         inset;
 
 @property(nonatomic, strong, readonly)          UIScrollView        *scrollView;
 
